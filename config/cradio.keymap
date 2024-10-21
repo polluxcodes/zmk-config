@@ -60,9 +60,18 @@
         tri_layer {
             bindings = <
 &sys_reset      &trans  &trans  &trans      &bt BT_SEL 0    &trans  &trans  &trans  &trans  &sys_reset
-&bootloader     &trans  &trans  &trans      &bt BT_SEL 1    &trans  &trans  &trans  &trans  &bootloader
+&bootloader     &trans  &trans  &trans      &bt BT_SEL 1    &trans  &to 4   &trans  &trans  &bootloader
 &bt BT_CLR_ALL  &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &trans  &trans  &trans  &trans
                                 &trans      &trans          &trans  &trans
+            >;
+        };
+
+        GAMING_LAYER {
+            bindings = <
+&kp ESC    &kp Q  &kp W  &kp E    &kp R        &none  &none  &none  &none  &none
+&kp LSHFT  &kp A  &kp S  &kp D    &kp F        &none  &to 0  &none  &none  &none
+&kp LCTRL  &kp Z  &kp X  &kp C    &kp V        &none  &none  &none  &none  &none
+                         &kp TAB  &kp SPACE    &none  &none
             >;
         };
     };
