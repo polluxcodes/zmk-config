@@ -16,6 +16,16 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
+
+        hrm: hrm {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <400>;
+        };
     };
 
     conditional_layers {
@@ -32,10 +42,10 @@
 
         default_layer {
             bindings = <
-&kp SEMI        &kp COMMA       &kp DOT           &kp P         &kp Y            &kp F       &kp G        &kp C              &kp R            &kp L
-&mt LEFT_ALT A  &mt LEFT_GUI O  &mt LEFT_SHIFT E  &mt LCTRL U   &kp I            &kp D       &mt RCTRL H  &mt RIGHT_SHIFT T  &mt RIGHT_GUI N  &mt RIGHT_ALT S
-&kp SQT         &kp Q           &kp J             &kp K         &kp X            &kp B       &kp M        &kp W              &kp V            &kp Z
-                                                  &lt 2 ESCAPE  &ht TAB SPACE    &kp RETURN  &lt 1 BSPC
+&kp SEMI         &kp COMMA        &kp DOT            &kp P         &kp Y            &kp F       &kp G         &kp C               &kp R             &kp L
+&hrm LEFT_ALT A  &hrm LEFT_GUI O  &hrm LEFT_SHIFT E  &hrm LCTRL U  &kp I            &kp D       &hrm RCTRL H  &hrm RIGHT_SHIFT T  &hrm RIGHT_GUI N  &hrm RIGHT_ALT S
+&kp SQT          &kp Q            &kp J              &kp K         &kp X            &kp B       &kp M         &kp W               &kp V             &kp Z
+                                                     &lt 2 ESCAPE  &ht TAB SPACE    &kp RETURN  &lt 1 BSPC
             >;
         };
 
