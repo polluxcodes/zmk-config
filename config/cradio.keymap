@@ -32,19 +32,19 @@
 
         default_layer {
             bindings = <
-&kp SEMI        &kp COMMA       &kp DOT           &kp P        &kp Y        &kp F      &kp G        &kp C              &kp R            &kp L
-&mt LEFT_ALT A  &mt LEFT_GUI O  &mt LEFT_SHIFT E  &mt LCTRL U  &kp I        &kp D      &mt RCTRL H  &mt RIGHT_SHIFT T  &mt RIGHT_GUI N  &mt RIGHT_ALT S
-&kp SQT         &kp Q           &kp J             &kp K        &kp X        &kp B      &kp M        &kp W              &kp V            &kp Z
-                                                  &lt 2 TAB    &kp ENTER    &kp SPACE  &lt 1 BSPC
+&kp SEMI        &kp COMMA       &kp DOT           &kp P         &kp Y            &kp F       &kp G        &kp C              &kp R            &kp L
+&mt LEFT_ALT A  &mt LEFT_GUI O  &mt LEFT_SHIFT E  &mt LCTRL U   &kp I            &kp D       &mt RCTRL H  &mt RIGHT_SHIFT T  &mt RIGHT_GUI N  &mt RIGHT_ALT S
+&kp SQT         &kp Q           &kp J             &kp K         &kp X            &kp B       &kp M        &kp W              &kp V            &kp Z
+                                                  &lt 2 ESCAPE  &ht TAB SPACE    &kp RETURN  &lt 1 BSPC
             >;
         };
 
         right_layer {
             bindings = <
-&kp INS     &kp N1  &kp N2  &kp N3  &trans     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
-&kp DEL     &kp N4  &kp N5  &kp N6  &trans     &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp SEMI
-&caps_word  &kp N7  &kp N8  &kp N9  &kp N0     &trans    &trans     &trans     &trans     &trans
-                            &trans  &kp ESC    &trans    &trans
+&kp INS     &kp PG_DN  &kp UP    &kp PG_UP  &trans    &kp FSLH  &kp N7   &kp N8  &kp N9  &kp MINUS
+&kp DEL     &kp LEFT   &kp DOWN  &kp RIGHT  &trans    &kp STAR  &kp N4   &kp N5  &kp N6  &kp PLUS
+&caps_word  &trans     &kp HOME  &kp END    &trans    &trans    &kp N1   &kp N2  &kp N3  &kp RET
+                                 &trans     &trans    &kp N0    &kp DOT
             >;
         };
 
@@ -59,10 +59,10 @@
 
         tri_layer {
             bindings = <
-&sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &trans  &trans  &trans  &trans  &sys_reset
-&bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &trans  &trans  &trans  &trans  &bootloader
-&trans       &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &trans  &trans  &trans  &trans
-                             &trans      &trans          &trans  &trans
+&sys_reset      &trans  &trans  &trans      &bt BT_SEL 0    &trans  &trans  &trans  &trans  &sys_reset
+&bootloader     &trans  &trans  &trans      &bt BT_SEL 1    &trans  &trans  &trans  &trans  &bootloader
+&bt BT_CLR_ALL  &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &trans  &trans  &trans  &trans
+                                &trans      &trans          &trans  &trans
             >;
         };
     };
