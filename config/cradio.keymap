@@ -71,28 +71,28 @@
 
         right_layer {
             bindings = <
-&kp INS  &kp PG_DN  &kp UP    &kp PG_UP  &trans    &kp FSLH  &kp N7   &kp N8  &kp N9  &kp MINUS
-&kp DEL  &kp LEFT   &kp DOWN  &kp RIGHT  &trans    &kp STAR  &kp N4   &kp N5  &kp N6  &kp PLUS
-&trans   &trans     &kp HOME  &kp END    &trans    &trans    &kp N1   &kp N2  &kp N3  &kp RET
-                              &trans     &trans    &kp N0    &kp DOT
+&kp INS  &kp PG_DN  &kp UP    &kp PG_UP  &none    &kp FSLH  &kp N7    &kp N8  &kp N9  &kp MINUS
+&kp DEL  &kp LEFT   &kp DOWN  &kp RIGHT  &none    &kp STAR  &kp N4    &kp N5  &kp N6  &kp PLUS
+&none    &none      &kp HOME  &kp END    &none    &kp N0    &kp BSPC  &kp N2  &kp N3  &kp RET
+                              &none      &none    &none     &kp DOT
             >;
         };
 
         left_layer {
             bindings = <
-&mo 5     &kp LBKT  &kp LBRC   &kp RBRC      &trans       &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT  &kp TILDE
+&mo 5     &kp LBKT  &kp LBRC   &kp RBRC      &none        &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT  &kp TILDE
 &kp EXCL  &kp AT    &kp HASH   &kp DLLR      &kp PRCNT    &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE
-&trans    &trans    &kp SLASH  &kp QUESTION  &trans       &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE  &trans
-                               &trans        &trans       &trans     &trans
+&none     &none     &kp SLASH  &kp QUESTION  &none        &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE  &none
+                               &none         &none        &none      &none
             >;
         };
 
         tri_layer {
             bindings = <
-&sys_reset      &trans  &trans  &trans      &bt BT_SEL 0    &trans  &trans  &trans  &trans  &sys_reset
-&bootloader     &trans  &trans  &trans      &bt BT_SEL 1    &trans  &to 4   &trans  &trans  &bootloader
-&bt BT_CLR_ALL  &trans  &trans  &bt BT_CLR  &bt BT_SEL 2    &trans  &trans  &trans  &trans  &trans
-                                &trans      &trans          &trans  &trans
+&sys_reset      &none  &none  &none       &bt BT_SEL 0    &none  &none  &none  &none  &sys_reset
+&bootloader     &none  &none  &none       &bt BT_SEL 1    &none  &to 4  &none  &none  &bootloader
+&bt BT_CLR_ALL  &none  &none  &bt BT_CLR  &bt BT_SEL 2    &none  &none  &none  &none  &none
+                              &none       &none           &none  &none
             >;
         };
 
