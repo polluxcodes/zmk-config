@@ -52,7 +52,7 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <1 2>;
+            if-layers = <2 1>;
             then-layer = <3>;
         };
     };
@@ -62,28 +62,28 @@
 
         default_layer {
             bindings = <
-&kp SEMI         &kp COMMA        &kp DOT            &kp P         &kp Y            &kp F       &kp G         &kp C               &kp R             &kp L
-&hml LEFT_ALT A  &hml LEFT_GUI O  &hml LEFT_SHIFT E  &hml LCTRL U  &kp I            &kp D       &hmr RCTRL H  &hmr RIGHT_SHIFT T  &hmr RIGHT_GUI N  &hmr RIGHT_ALT S
-&kp SQT          &kp Q            &kp J              &kp K         &kp X            &kp B       &kp M         &kp W               &kp V             &kp Z
-                                                     &lt 2 ESCAPE  &ht TAB SPACE    &kp RETURN  &lt 1 BSPC
+&kp SEMI  &kp COMMA    &kp DOT       &kp P            &kp Y            &kp F              &kp G            &kp C         &kp R            &kp L
+&kp A     &hml LALT O  &hml RCTRL E  &hml LEFT_GUI U  &kp I            &kp D              &hmr LEFT_GUI H  &hmr LCTRL T  &hmr LEFT_ALT N  &kp S
+&kp SQT   &kp Q        &kp J         &kp K            &kp X            &kp B              &kp M            &kp W         &kp V            &kp Z
+                                     &lt 2 ESCAPE     &ht TAB SPACE    &mt LSHIFT RETURN  &lt 1 BSPC
             >;
         };
 
-        right_layer {
+        symb_layer {
+            bindings = <
+&none     &kp LBKT  &kp LBRC   &kp RBRC      &none        &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT  &kp TILDE
+&kp EXCL  &kp AT    &kp HASH   &kp DLLR      &kp PRCNT    &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE
+&none     &none     &kp SLASH  &kp QUESTION  &none        &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE  &mo 5
+                               &trans        &none        &none      &trans
+            >;
+        };
+
+        numnav_layer {
             bindings = <
 &kp INS  &kp PG_DN  &kp UP    &kp PG_UP  &none    &kp FSLH  &kp N7  &kp N8  &kp N9  &kp MINUS
 &kp DEL  &kp LEFT   &kp DOWN  &kp RIGHT  &none    &kp STAR  &kp N4  &kp N5  &kp N6  &kp PLUS
 &none    &none      &kp HOME  &kp END    &none    &kp N0    &kp N1  &kp N2  &kp N3  &kp RET
                               &trans     &none    &none     &trans
-            >;
-        };
-
-        left_layer {
-            bindings = <
-&mo 5     &kp LBKT  &kp LBRC   &kp RBRC      &none        &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT  &kp TILDE
-&kp EXCL  &kp AT    &kp HASH   &kp DLLR      &kp PRCNT    &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE
-&none     &none     &kp SLASH  &kp QUESTION  &none        &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE  &none
-                               &trans        &none        &none      &trans
             >;
         };
 
@@ -96,7 +96,7 @@
             >;
         };
 
-        GAMING_LAYER {
+        gaming_layer {
             bindings = <
 &kp ESC    &kp Q  &kp W  &kp E    &kp R        &none  &none  &none  &none  &none
 &kp LSHFT  &kp A  &kp S  &kp D    &kp F        &none  &to 0  &none  &none  &none
@@ -107,10 +107,10 @@
 
         function_layer {
             bindings = <
-&none  &none  &none  &none  &none    &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
-&none  &none  &none  &none  &none    &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
-&none  &none  &none  &none  &none    &kp F11  &kp F12  &none   &none   &none
-                     &none  &none    &none    &none
+&none  &kp C_MUTE  &kp C_VOL_DN      &kp C_VOL_UP          &none              &kp F1  &kp F2   &kp F3   &kp F4   &none
+&none  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT            &kp PRINTSCREEN    &kp F5  &kp F6   &kp F7   &kp F8   &none
+&none  &none       &kp C_BRI_DEC     &kp C_BRIGHTNESS_INC  &none              &kp F9  &kp F10  &kp F11  &kp F12  &none
+                                     &none                 &none              &none   &none
             >;
         };
     };
