@@ -132,7 +132,7 @@
             bindings = <
 &none  &kp C_MUTE  &kp C_VOL_DN      &kp C_VOL_UP          &none                  &kp F1  &kp F2   &kp F3   &kp F4   &none
 &none  &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT            &kp PRINTSCREEN        &kp F5  &kp F6   &kp F7   &kp F8   &none
-&none  &none       &kp C_BRI_DEC     &kp C_BRIGHTNESS_INC  &none                  &kp F9  &kp F10  &kp F11  &kp F12  &none
+&none  &none       &kp C_BRI_DEC     &kp C_BRIGHTNESS_INC  &none                  &kp F9  &kp F10  &kp F11  &kp F12  &kp RIGHT_ALT
                                      &none                 &none                  &none   &none
             >;
         };
